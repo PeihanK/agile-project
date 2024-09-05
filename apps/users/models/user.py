@@ -43,7 +43,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     deleted = models.BooleanField(default=False)
     position = models.CharField(
         max_length=15,
-        choices=Positions.choices,
+        choices=Positions.choices(),
         default=Positions.PROGRAMMER
     )
     project = models.ForeignKey(

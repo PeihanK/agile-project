@@ -13,7 +13,7 @@ class Task(models.Model):
     description = models.TextField()
     status = models.CharField(
         max_length=15,
-        choices=Statuses.choices,
+        choices=Statuses.choices(),
         default=Statuses.NEW
     )
     priority = models.SmallIntegerField(
